@@ -1,0 +1,127 @@
+:root {
+  --primary-text: #000;
+  --second-text: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #000;
+  background: #404eed;
+}
+
+.container {
+  max-width: 1180px;
+  margin: auto;
+}
+
+.header {
+  background-image: url("../img/header-image.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header-top {
+  padding: 23px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-nav__list {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.header-nav__link {
+  color: var(--second-text);
+  text-align: center;
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: 600;
+}
+
+.header-nav__link:hover {
+  text-decoration: underline;
+}
+
+.header-top__btn {
+  border: none;
+  background: var(--second-text);
+  border-radius: 40px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  padding: 7px 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, .2);
+}
+
+.header-top__btn:hover,
+.button__download:hover {
+  color: #5865f2;
+
+}
+
+.header-bootom {
+  color: var(--second-text);
+  padding: 120px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__title {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 95%;
+  text-transform: uppercase;
+}
+
+.header__descr {
+  width: 780px;
+  margin-top: 40px;
+  font-size: 20px;
+  line-height: 1.625;
+  text-align: center;
+}
+
+.header-bottom__btn {
+  margin-top: 32px;
+  display: flex;
+  gap: 24px;
+}
+
+.download {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-bottom__link {
+  border: none;
+  border-radius: 28px;
+  font-size: 20px;
+  padding: 16px 32px;
+}
+
+.button__download {
+  color: var(--primary-text);
+  background: var(--second-text);
+}
+
+.button__open {
+  background: #23272a;
+  color: var(--second-text);
+}
+
+.button__open:hover {
+  background-color: hsl(223, 6.7%, 20.6%);
+}
