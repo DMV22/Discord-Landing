@@ -1,6 +1,11 @@
 :root {
-  --primary-text: #000;
-  --second-text: #fff;
+  --primary-color: #000;
+  --second-color: #fff;
+  --off-white: #f6f6f6;
+  --brand: #5865f2;
+
+  --font-display: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-code: "Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Monaco", "Courier New", Courier, monospace;
 }
 
 * {
@@ -8,9 +13,9 @@
 }
 
 body {
-  font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
   color: #000;
-  background: #404eed;
+  background: #fff;
 }
 
 .container {
@@ -18,10 +23,12 @@ body {
   margin: auto;
 }
 
+/* Header */
 .header {
   background-image: url("../img/header-image.svg");
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #404EED;
 }
 
 .header-top {
@@ -38,7 +45,7 @@ body {
 }
 
 .header-nav__link {
-  color: var(--second-text);
+  color: var(--second-color);
   text-align: center;
   font-size: 16px;
   line-height: 140%;
@@ -51,7 +58,7 @@ body {
 
 .header-top__btn {
   border: none;
-  background: var(--second-text);
+  background: var(--second-color);
   border-radius: 40px;
   font-size: 14px;
   line-height: 24px;
@@ -71,7 +78,7 @@ body {
 }
 
 .header-bootom {
-  color: var(--second-text);
+  color: var(--second-color);
   padding: 120px 0;
   display: flex;
   flex-direction: column;
@@ -105,7 +112,8 @@ body {
   gap: 8px;
 }
 
-.header-bottom__link {
+.header-bottom__link,
+.question__link {
   border: none;
   border-radius: 28px;
   font-size: 20px;
@@ -113,15 +121,107 @@ body {
 }
 
 .button__download {
-  color: var(--primary-text);
-  background: var(--second-text);
+  color: var(--primary-color);
+  background: var(--second-color);
 }
 
 .button__open {
   background: #23272a;
-  color: var(--second-text);
+  color: var(--second-color);
 }
 
 .button__open:hover {
   background-color: hsl(223, 6.7%, 20.6%);
+}
+
+/* Main */
+.main-info {
+  padding: 120px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-info__image {
+  width: 678px;
+  height: 440px;
+}
+
+.main-info__text {
+  width: 380px;
+}
+
+.main-info__title {
+  line-height: 120%;
+  font-size: 48px;
+  font-size: clamp(20px, 4vw, 40px);
+  font-weight: 800;
+}
+
+.main-info__descr {
+  margin-top: 24px;
+  font-size: 20px;
+  line-height: 1.625;
+}
+
+#main2,
+#main4,
+.question {
+  background: var(--off-white);
+}
+
+.main-info--4 {
+  flex-direction: column;
+  padding-bottom: 80px;
+}
+
+.main-info__text--4 {
+  width: 980px;
+  text-align: center;
+}
+
+.main-info__image--4 {
+  margin-top: 16px;
+}
+
+/* Question */
+.question {
+  padding-bottom: 120px;
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question__title {
+  margin-top: 30px;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 120%;
+  position: relative;
+  z-index: 1;
+}
+
+.question__title::before {
+  position: absolute;
+  content: url("../img/stars-photo.svg");
+  bottom: 20px;
+  left: -10px;
+  z-index: -1;
+}
+
+.question__btn {
+  display: flex;
+  margin-top: 40px;
+}
+
+.question__link {
+  color: var(--second-color);
+  background: var(--brand);
+}
+
+.question__link:hover {
+  background-color: hsl(235, calc(var(--saturation-factor, 1)*86.1%), 71.8%);
 }
