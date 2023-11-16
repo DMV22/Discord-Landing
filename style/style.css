@@ -3,6 +3,7 @@
   --second-color: #fff;
   --off-white: #f6f6f6;
   --brand: #5865f2;
+  --not-quite-black: #23272a;
 
   --font-display: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-code: "Consolas", "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Monaco", "Courier New", Courier, monospace;
@@ -222,6 +223,106 @@ body {
   background: var(--brand);
 }
 
-.question__link:hover {
+.question__link:hover,
+.footer-bottom__link:hover {
   background-color: hsl(235, calc(var(--saturation-factor, 1)*86.1%), 71.8%);
+}
+
+/* Footer */
+.footer {
+  background: var(--not-quite-black);
+  padding-top: 80px;
+  padding-bottom: 64px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 58px;
+}
+
+.footer-info__image {
+  width: 24px;
+  height: 16px;
+}
+
+.footer__select {
+  margin-top: 24px;
+  margin-bottom: 48px;
+  color: var(--second-color);
+  background: inherit;
+  font-size: 14px;
+  line-height: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.footer__option {
+  color: var(--not-quite-black);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.footer__social-network {
+  display: flex;
+  gap: 24px;
+}
+
+.footer__image {
+  cursor: pointer;
+}
+
+.footer-nav__title {
+  color: var(--brand);
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.footer__ul {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer__link {
+  color: var(--second-color);
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+}
+
+.footer__line {
+  background-color: var(--brand);
+  width: 100%;
+  height: 1px;
+  margin-bottom: 32px;
+  border: none;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom__link {
+  padding: 7px 16px;
+  background-color: var(--brand);
+  color: var(--second-color);
+  border-radius: 40px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  cursor: pointer;
 }
