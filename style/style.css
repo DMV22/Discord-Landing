@@ -258,14 +258,20 @@ body {
   justify-content: space-between;
 }
 
+.footer__choice {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  margin-bottom: 48px;
+}
+
 .footer-info__image {
   width: 24px;
   height: 16px;
+  margin-right: 8px;
 }
 
 .footer__select {
-  margin-top: 24px;
-  margin-bottom: 48px;
   color: var(--second-color);
   background: inherit;
   font-size: 14px;
